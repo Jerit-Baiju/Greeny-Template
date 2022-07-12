@@ -1,0 +1,20 @@
+.theme1 {
+    background-color: #498553;
+}
+
+.theme2 {
+    background-color: #4C6A4B;
+}
+
+.theme3 {
+    background-color: #ccead5;
+}
+
+.theme4 {
+    background-color: #FFFFFF;
+}
+
+.product_image img{
+    border: #498553 2px solid;
+    border-radius: 1em;
+}
