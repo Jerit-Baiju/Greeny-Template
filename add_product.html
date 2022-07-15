@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +10,44 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/add_product.css">
 </head>
+
 <body class="theme3">
     <div class="container">
+        <label class="form-label" for="">Name:</label>
+        <input class="form-control" required type="text" name='name'>
+
+        <label class="form-label" for="">Company:</label>
+        <input class="form-control" required type="text" name="company" id="" list="companies">
+        <datalist id="companies">
+            <select>
+                <option value="{{company.name}}">{{company.name}}</option>
+            </select>
+        </datalist>
+
+        <label class="form-label" for="">Image:</label>
+        <input class="form-control" required type="file" name="image" id="">
+        <div class="p-1"></div>
+
+        <label class="form-label" for="">Category:</label>
+        <input class="form-control" required type="text" name="category" id="" list="categories">
+        <datalist id="categories">
+            <select>
+                <option value="{{category.name}}">{{category.name}}</option>
+            </select>
+        </datalist>
+
+        <label class="form-label" for="">Quantity:</label>
+        <input class="form-control" required type="text" name="quantity">
+        <input class="form-check" required type="radio" name="pack_name" id="{{pack_type}}" value="KG">
+
+        <label for="">Price:</label>
+        <input required type="text" name="price">
+
+        <input class="form" type="submit" value="ADD PRODUCT">
+
 
     </div>
-    
+
 </body>
+
 </html>
