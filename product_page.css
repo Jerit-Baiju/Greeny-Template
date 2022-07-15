@@ -13,7 +13,9 @@
 .theme4 {
     background-color: #FFFFFF;
 }
-
+.small-text{
+    color: #13542D;
+}
 .product_image img{
     border: #498553 2px solid;
     border-radius: 1em;
