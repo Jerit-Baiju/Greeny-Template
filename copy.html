@@ -21,7 +21,7 @@
     <input required type="file" name="image" id=""> <br>
     <div class="p-1"></div>
 
-    <label class="form-label">Category:</label>
+    <label for="">Category:</label>
     <input required type="text" name="category" id="" list="categories">
     <datalist id="categories">
       <select>
@@ -34,14 +34,17 @@
 
     <label for="">Quantity:</label>
     <input required type="text" name="quantity">
-    <input required type="radio" name="pack_name" id="{{pack_type}}" value="{{pack_type}}">
-    <label for="{{pack_type}}">{{pack_type}}</label>
+    {% for pack_type in pack_types %}
+      <input required type="radio" name="pack_name" id="{{pack_type}}" value="{{pack_type}}">
+      <label for="{{pack_type}}">{{pack_type}}</label>
+    {% endfor %}<br>
     <div class="p-1"></div>
 
     <label for="">Price:</label>
-    <input required type="text" name="price">
+    <input required type="text" name="price"><br>
+    <div class="p-1"></div>
 
-    <input class="btn btn-success" type="submit" value="ADD PRODUCT">
+    <input type="submit" value="ADD PRODUCT">
   </div>
 
   {{form1.name}}

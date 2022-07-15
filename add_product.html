@@ -13,6 +13,7 @@
 
 <body class="theme3">
     <div class="container">
+        <div class="pt-4"></div>
         <label class="form-label" for="">Name:</label>
         <input class="form-control" required type="text" name='name'>
 
@@ -31,20 +32,32 @@
         <label class="form-label" for="">Category:</label>
         <input class="form-control" required type="text" name="category" id="" list="categories">
         <datalist id="categories">
-            <select>
+            <select class="form-select">
                 <option value="{{category.name}}">{{category.name}}</option>
             </select>
         </datalist>
 
         <label class="form-label" for="">Quantity:</label>
         <input class="form-control" required type="text" name="quantity">
-        <label class="form-check-label">KG</label>
-        <input class="form-check-input" required type="radio" name="pack_name" id="{{pack_type}}" value="KG">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="pack_type" id="d1">
+            <label class="form-check-label" for="d1">KG</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="pack_type" id="d2">
+            <label class="form-check-label" for="d1">LR</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="pack_type" id="d3">
+            <label class="form-check-label" for="d1">ML</label>
+        </div>
 
         <label class="form-label">Price:</label>
         <input class="form-control" required type="text" name="price">
-
-        <input class="btn btn-success" type="submit" value="ADD PRODUCT">
+        <div class="pt-3 text-center">
+           <input class="btn btn-success" type="submit" value="ADD PRODUCT"> 
+        </div>
+        
 
 
     </div>
