@@ -1,5 +1,6 @@
 from flask import Flask
 from liveserver import LiveServer
+from pyflit import Page
 
 app = Flask(__name__)
 ls = LiveServer(app)
@@ -10,7 +11,8 @@ def index():
 
 @app.route('/test')
 def test():
-    return ls.render_template('test.html')
+    page = Page('index')
+    return ls.render_template(page.export())
 
 
 ls.run("192.168.43.21",7000, debug=True)
