@@ -10,7 +10,7 @@ def index():
 
 @app.route('/test')
 def test():
-    return ls.render_template('out.html')
+    return ls.render_template('home.html')
 
 
 ls.run("192.168.43.21",5000, debug=True)
